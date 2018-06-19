@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: "Alice", sans-serif;
+}
+
+#backImage {
+    background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+    ),   
+    url("/images/pizza.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+}
+
+#nav a, #hamburger {
+    color: #FFF;
+    /* background-color: black; */
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+#nav span {
+    padding: 14px;
+    float: right;
+}
+
+#logo {
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+#logo img {
+    padding-left: 30px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+#hamburger {
+    display: none;
+    float: right;
+    clear: right;
+}
+
+nav div a {
+    display: inline;
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        width: 100%;
+    }
+
+    #hamburger {
+        display: block;
+        color: #FFF;
+        right: 20px;
+    }
+    
+    nav div a {
+        display: none;
+    }
+
+    nav div {
+        width: 100%;
+    }
+
+    .res a {
+        display: block;
+        clear: right;
+        /* background-color: #000; */
+        width: 100%;
+        padding: 5px;
+    }
+
+    #hamburger {
+        padding-top: 5px;
+    }
+
+    #nav a, #hamburger {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Add responsive classes */
+
+    .navHeight {
+        height: 160px;
+    }
+}
+
+/* GIF ANIMATION */
+
+.fader {
+    width: 100%;
+    height: 662px;
+    background-color: #000;
+    margin-top: 0;
+    border-bottom: 3px solid #000
+    /* margin-top: -5px; */
+}
+
+.fader li {
+    animation: fade 24s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: 0;
+}
+
+.fader li:nth-child(1) {
+    background-image: url("/images/cover.jpg");
+}
+
+.fader li:nth-child(2) {
+    animation-delay: 6s;
+    background-image: url("/images/oven.jpg");
+}
+
+.fader li:nth-child(3) {
+    animation-delay: 12s;
+    background-image: url("/images/rectangle.jpg");
+}
+
+.fader li:nth-child(4) {
+    animation-delay: 18s;
+    background-image: url("/images/oven2.jpg");
+}
+
+@keyframes fade {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    15% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* .fader {
+        margin-top: 0px;
+    }
+
+    .fader li {
+        top: 120px;
+    } */
+}
+
+.title {
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    top: 160px;
+    left: 80px;
+    z-index:1;
+}
+
+.title h1 {
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-size: 70px;
+    text-shadow: 0px 4px #000;
+    color: #FFF;
+}
+
+@media screen and (max-width: 1050px) {
+    .title {
+        left: 40px;
+    }
+
+    .title h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .fader {
+        height: 400px;
+    }
+
+    .fader li {
+        height: 400px;
+    }
+
+    .title {
+        left: 5px;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .faderHeight {
+        top: 160px!important;
+    }
+}
+
+/* DESCRIPTION */
+
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#desc p {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+#values {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#values div {
+    width: 350px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #000;
+    border: 5px solid #000;
+
+    border-radius: 10px;
+    height: auto;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+#values div:nth-child(1) {
+    background: linear-gradient(
+        rgba(0, 255, 0, 0.5),
+        rgba(255, 255, 255, 0.5)
+        );
+}
+
+#values div:nth-child(2) {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+        );
+    }
+    
+    #values div:nth-child(3) {
+        background: linear-gradient(
+            rgba(255, 0, 0, 0.5),
+            rgba(255, 255, 255, 0.5)
+            );
+    }
+    
+body {
+    overflow-x: hidden;
+    
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000;
+}
+
+table {
+    width: 100%;
+    padding: 30px 20px;
+    color: #FFF;
+    text-align: left;
+}
+
+th, td{
+    padding-left: 30px;
+}
+
+table tr th {
+    padding-bottom: 14px;
+    font-size: 30px;
+}
+
+table tr td a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.small {
+    display: none;
+}
+
+footer {
+    display: block;
+    width: 100%;
+}
+
+footer p {
+    color: #FFF;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 530px) {
+    .large {
+        display: none;
+    }
+
+    .small {
+        display: inherit;
+        /* height: 100%; */
+    }
+}

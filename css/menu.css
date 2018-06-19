@@ -1,0 +1,173 @@
+body {
+    font-family: "Alice", sans-serif;;
+    margin: 0;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+}
+
+#nav a, #hamburger {
+    color: #FFF;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+#nav span {
+    padding: 14px;
+    float: right;
+}
+
+#logo {
+    float: left;
+}
+
+#logo img {
+    padding-left: 30px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+#hamburger {
+    display: none;
+    float: right;
+}
+
+nav div a {
+    display: inline;
+}
+
+
+@media screen and (max-width: 500px) {
+    nav {
+        width: 100%;
+    }
+
+    #hamburger {
+        display: block;
+        color: #FFF;
+        right: 20px;
+        padding-top: 5px;
+    }
+    
+    nav div a {
+        display: none;
+    }
+
+    .res a {
+        display: block;
+        clear: right;
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* Add responsive classes */
+
+    .navHeight {
+        height: 160px;
+    }        
+}
+
+
+/* MENU */
+
+
+h1 {
+    text-align: center;
+}
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-container div {
+    width: 40%;
+    min-width: 300px;
+    text-align: center;
+    /* border: red 1px solid; */
+    margin-top: 30px;
+    /* flex-grow: 1; */
+}
+
+@media screen and (max-width: 900px) {
+    .menu-container div {
+        width: auto;
+
+    }
+}
+
+#apps div img, #zahs div img, #drinks div img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover
+}
+
+
+@media screen and (max-width: 500px) {
+    #apps div img, #zahs div img, #drinks div img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000;
+}
+
+table {
+    width: 100%;
+    padding: 30px 20px;
+    color: #FFF;
+    text-align: left;
+}
+
+th, td{
+    padding-left: 30px;
+}
+
+table tr th {
+    padding-bottom: 14px;
+    font-size: 30px;
+}
+
+table tr td a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.small {
+    display: none;
+}
+
+footer {
+    display: block;
+    width: 100%;
+}
+
+footer p {
+    color: #FFF;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 530px) {
+    .large {
+        display: none;
+    }
+
+    .small {
+        display: inherit;
+        /* height: 100%; */
+    }
+}
